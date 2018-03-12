@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Doc," />
 
 
 
@@ -95,13 +95,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello">
-<meta property="og:url" content="http://yoursite.com/archives/2017/12/index.html">
+<meta name="description" content="Apple Guide And Sample Guide   Objects normally have a longer life than the simple scope of a method call. In particular, an object often needs to stay alive longer than the original variable that wa">
+<meta name="keywords" content="Doc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Objective-C Note">
+<meta property="og:url" content="http://yoursite.com/2018/03/12/Objective-C/index.html">
 <meta property="og:site_name" content="Hello">
+<meta property="og:description" content="Apple Guide And Sample Guide   Objects normally have a longer life than the simple scope of a method call. In particular, an object often needs to stay alive longer than the original variable that wa">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-12T16:58:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello">
+<meta name="twitter:title" content="Objective-C Note">
+<meta name="twitter:description" content="Apple Guide And Sample Guide   Objects normally have a longer life than the simple scope of a method call. In particular, an object often needs to stay alive longer than the original variable that wa">
 
 
 
@@ -131,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/12/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/12/Objective-C/"/>
 
 
 
 
 
-  <title>归档 | Hello</title>
+  <title>Objective-C Note | Hello</title>
   
 
 
@@ -156,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -220,74 +225,167 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/Objective-C/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lzx1995">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/02/CSAPP-Lab2/" itemprop="url">
-              
-                <span itemprop="name">CSAPP Lab2</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Objective-C Note</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-02T14:35:14+08:00"
-              content="2017-12-02" >
-          12-02
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T09:14:25+08:00">
+                2018-03-12
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <p><a href="https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html" target="_blank" rel="external"> Apple Guide And Sample Guide </a></p>
+<blockquote>
+<p>Objects normally have a longer life than the simple scope of a method call. In particular, an object often needs to stay alive longer than the original variable that was created to keep track of it, so an object’s memory is allocated and deallocated dynamically.</p>
+</blockquote>
+<p><strong>Note: If you’re used to using terms like the stack and the heap, a local variable is allocated on the stack, while objects are allocated on the heap.</strong></p>
+<p>This requires you to use C pointers (which hold memory addresses) to keep track of their location in memory, like this:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)myMethod &#123;</div><div class="line">    <span class="built_in">NSString</span> *myString = <span class="comment">// get a string from somewhere...</span></div><div class="line">    [...]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>Although the scope of the pointer variable myString (the asterisk indicates it’s a pointer) is limited to the scope of myMethod, the actual string object that it points to in memory may have a longer life outside that scope. It might already exist, or you might need to pass the object around in additional method calls, for example.</p>
+<hr>
+<blockquote>
+<p>The alloc method has one other important task, which is to clear out the memory allocated for the object’s properties by setting them to zero. This avoids the usual problem of memory containing garbage from whatever was stored before, but is not enough to initialize an object completely.</p>
+</blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">+ (<span class="keyword">id</span>)alloc</div></pre></td></tr></table></figure>
+<hr>
+<!-- toc -->
+<ul>
+<li><a href="#working-with-nil">Working with nil</a></li>
+</ul>
+<!-- tocstop -->
+<h3><span id="working-with-nil">Working with nil</span></h3><p>It’s perfectly acceptable in Objective-C to send a message to nil. If you do send a message to nil, obviously nothing happens.</p>
+<p><strong>Note: If you expect a return value from a message sent to nil, the return value will be nil for object return types, 0 for numeric types, and NO for BOOL types. Returned structures have all members initialized to zero.</strong></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Doc/" rel="tag"># Doc</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/TableView/" rel="next" title="UITableView的一些小细节">
+                <i class="fa fa-chevron-left"></i> UITableView的一些小细节
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -295,6 +393,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -315,8 +417,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -389,6 +500,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Working with nil</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -509,6 +636,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
